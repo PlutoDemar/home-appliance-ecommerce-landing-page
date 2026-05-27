@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kindred Goods | Modern Home Essentials</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Kindred Goods home">
+        <span class="brand-mark">K</span>
+        <span>Kindred Goods</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#journal">Journal</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#newsletter">Join</a>
+        <a class="cart-link" href="#" aria-label="View shopping cart"
+          >E Cart <span id="cart-count">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Spring edit now live</p>
+          <h1 id="hero-title">
+            Home goods that make daily routines feel easy.
+          </h1>
+          <p>
+            Curated lighting, desk pieces, ceramics, bags, and small comforts
+            for calmer rooms and better everyday habits.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#shop">Shop new arrivals</a>
+            <a class="button secondary-button" href="#collections"
+              >Browse collections</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip" aria-label="Store benefits">
+        <article>
+          <strong>Free shipping</strong>
+          <span>On orders over $75</span>
+        </article>
+        <article>
+          <strong>30 day returns</strong>
+          <span>Simple returns, no fuss</span>
+        </article>
+        <article>
+          <strong>Small batch picks</strong>
+          <span>Useful pieces selected weekly</span>
+        </article>
+      </section>
+
+      <section class="section" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Featured products</p>
+            <h2>Popular this week</h2>
+          </div>
+          <div class="filter-row" aria-label="Product filters">
+            <button
+              class="filter-button active"
+              type="button"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button class="filter-button" type="button" data-filter="home">
+              Home
+            </button>
+            <button class="filter-button" type="button" data-filter="carry">
+              Carry
+            </button>
+            <button class="filter-button" type="button" data-filter="desk">
+              Desk
+            </button>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" data-category="desk">
+            <a class="product-media" href="#" aria-label="View Brass Glow Lamp">
+              <img
+                src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80"
+                alt="Modern brass table lamp with warm light"
+              />
+              <span>Best seller</span>
+            </a>
+            <div class="product-body">
+              <div class="product-info">
+                <div>
+                  <p class="product-category">Desk</p>
+                  <h3>Brass Glow Lamp</h3>
+                </div>
+                <strong>$48</strong>
+              </div>
+              <p>Warm, compact lighting for nightstands and focused work.</p>
+              <button
+                class="add-button"
+                type="button"
+                data-product="Brass Glow Lamp"
+              >
+                Add to cart
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="home">
+            <a
+              class="product-media"
+              href="#"
+              aria-label="View Oak Reading Chair"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80"
+                alt="Minimal wooden chair in a bright room"
+              />
+            </a>
+            <div class="product-body">
+              <div class="product-info">
+                <div>
+                  <p class="product-category">Home</p>
+                  <h3>Oak Reading Chair</h3>
+                </div>
+                <strong>$132</strong>
+              </div>
+              <p>Compact seating with a clean oak frame and soft support.</p>
+              <button
+                class="add-button"
+                type="button"
+                data-product="Oak Reading Chair"
+              >
+                Add to cart
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="carry">
+            <a
+              class="product-media"
+              href="#"
+              aria-label="View Canvas Weekender"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=900&q=80"
+                alt="Canvas backpack on a simple background"
+              />
+              <span>New</span>
+            </a>
+            <div class="product-body">
+              <div class="product-info">
+                <div>
+                  <p class="product-category">Carry</p>
+                  <h3>Canvas Weekender</h3>
+                </div>
+                <strong>$96</strong>
+              </div>
+              <p>Durable canvas storage for short trips and daily errands.</p>
+              <button
+                class="add-button"
+                type="button"
+                data-product="Canvas Weekender"
+              >
+                Add to cart
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="desk">
+            <a class="product-media" href="#" aria-label="View Field Watch">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+                alt="Simple watch with a leather strap"
+              />
+            </a>
+            <div class="product-body">
+              <div class="product-info">
+                <div>
+                  <p class="product-category">Desk</p>
+                  <h3>Classic Field Watch</h3>
+                </div>
+                <strong>$86</strong>
+              </div>
+              <p>A clean daily watch with a quiet face and leather strap.</p>
+              <button
+                class="add-button"
+                type="button"
+                data-product="Classic Field Watch"
+              >
+                Add to cart
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="home">
+            <a
+              class="product-media"
+              href="#"
+              aria-label="View Stoneware Mug Set"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=80"
+                alt="Ceramic mugs on a table"
+              />
+            </a>
+            <div class="product-body">
+              <div class="product-info">
+                <div>
+                  <p class="product-category">Home</p>
+                  <h3>Stoneware Mug Set</h3>
+                </div>
+                <strong>$34</strong>
+              </div>
+              <p>Four hand-feel mugs for coffee, tea, and slow mornings.</p>
+              <button
+                class="add-button"
+                type="button"
+                data-product="Stoneware Mug Set"
+              >
+                Add to cart
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="carry">
+            <a
+              class="product-media"
+              href="#"
+              aria-label="View Daily Walk Sneakers"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80"
+                alt="White sneakers on a warm colored background"
+              />
+              <span>Low stock</span>
+            </a>
+            <div class="product-body">
+              <div class="product-info">
+                <div>
+                  <p class="product-category">Carry</p>
+                  <h3>Daily Walk Sneakers</h3>
+                </div>
+                <strong>$74</strong>
+              </div>
+              <p>Lightweight, clean, and comfortable for everyday routes.</p>
+              <button
+                class="add-button"
+                type="button"
+                data-product="Daily Walk Sneakers"
+              >
+                Add to cart
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="promo-band" aria-label="Seasonal offer">
+        <div>
+          <p class="eyebrow">Bundle and save</p>
+          <h2>Refresh your workspace with 15% off any three desk pieces.</h2>
+        </div>
+        <a class="button light-button" href="#shop">Build a bundle</a>
+      </section>
+
+      <section class="collections" id="collections">
+        <div class="collection-copy">
+          <p class="eyebrow">Collections</p>
+          <h2>Start with the room, then pick the pieces.</h2>
+          <p>
+            Each collection is arranged around a practical moment: focused work,
+            slower mornings, better storage, and weekend movement.
+          </p>
+        </div>
+        <div class="collection-grid">
+          <a class="collection-card" href="#">
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+              alt="Bright home office with a wood desk"
+            />
+            <span>Home office</span>
+          </a>
+          <a class="collection-card" href="#">
+            <img
+              src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80"
+              alt="Kitchen shelves with bowls and jars"
+            />
+            <span>Kitchen shelf</span>
+          </a>
+          <a class="collection-card" href="#">
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+              alt="Weekend bag near a sunny doorway"
+            />
+            <span>Weekend carry</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="journal" id="journal">
+        <img
+          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1100&q=80"
+          alt="Cozy bedroom with natural light and neutral bedding"
+        />
+        <div>
+          <p class="eyebrow">Learning note</p>
+          <h2>Ready for JavaScript practice.</h2>
+          <p>
+            The buttons, cart counter, filters, and product category attributes
+            are all set up so you can later add simple JavaScript interactions
+            without changing the page structure.
+          </p>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div>
+          <p class="eyebrow">Newsletter</p>
+          <h2>Get the weekly edit.</h2>
+        </div>
+        <form id="newsletter">
+          <label for="email-label">Email address</label>
+          <div class="form-row">
+            <input id="email" type="email" placeholder="you@example.com" />
+            <button type="submit">Sign up</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Kindred Goods. Static ecommerce frontend.</p>
+      <div>
+        <a href="#">Privacy</a>
+        <a href="#">Shipping</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
