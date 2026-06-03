@@ -4,23 +4,36 @@ const cartCount = document.querySelector("#cart-count");
 let count = Number(localStorage.getItem("cartCount")) || 0;
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-if (cartCount) {
-  cartCount.textContent = count;
+function updateCartUI() {
+  if (cartCount) {
+    cartCount.textContent = count;
+  }
 }
+
+updateCartUI();
 
 function saveCart() {
   localStorage.setItem("cartCount", count);
   localStorage.setItem("cart", JSON.stringify(cart));
-  cartCount.textContent = count;
+  updateCartUI();
 }
 
 addButton.forEach((button) => {
   button.addEventListener("click", function () {
     const productName = button.dataset.product;
 
+    const existingProduct = cart.find(
+      (product) => product.name === productName,
+    );
+    if (existingProduct) {
+      existingProduct.quantity++;
+    } else {
+      cart.push({ name: productName, quantity: 1 });
+    }
     count++;
-    cart.push(productName);
     saveCart();
+
+    console.log(cart);
 
     button.textContent = "Added";
     setTimeout(() => {
@@ -55,10 +68,10 @@ const emailInput = document.querySelector("#email");
 const emailError = document.querySelector("#email-error");
 
 function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
 }
 
-if (form && emailInput) {
+if (form && emailInput && emailError) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -76,5 +89,34 @@ if (form && emailInput) {
 
     emailError.textContent = "";
     console.log("success");
+  });
+}
+
+const cartLink = document.querySelector(".cart-link");
+const popupBtnLeft = document.querySelector("#popup-btn-left");
+const popupBtnRight = document.querySelector("#popup-btn-right");
+
+let hideTimeout;
+
+if (cartLink && popupBtnLeft && popupBtnRight) {
+  cartLink.addEventListener("mouseenter", () => {
+    clearTimeout(hideTimeout);
+    popupBtnLeft.classList.remove("hidden");
+    popupBtnRight.classList.remove("hidden");
+  });
+
+  cartLink.addEventListener("mouseleave", () => {
+    hideTimeout = setTimeout(() => {
+      popupBtnLeft.classList.add("hidden");
+      popupBtnRight.classList.add("hidden");
+    }, 900);
+  });
+
+  popupBtnLeft.addEventListener("click", () => {
+    localStorage.removeItem("cart");
+    localStorage.removeItem("cartCount");
+    count = 0;
+    cart = [];
+    updateCartUI();
   });
 }
